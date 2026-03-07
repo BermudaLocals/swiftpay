@@ -1,16 +1,35 @@
 {
-  "name": "swiftpay-monolith",
+  "name": "swiftpay",
   "version": "1.0.0",
+  "description": "SwiftPay - Lightning-Fast Payment Platform",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm install && cd client && npm install && npm run build"
+    "dev": "nodemon server.js"
   },
+  "keywords": [
+    "payments",
+    "fintech",
+    "stripe",
+    "paypal",
+    "wallet"
+  ],
+  "author": "SwiftPay Team",
+  "license": "MIT",
   "dependencies": {
-    "@supabase/supabase-js": "^2.90.1",
-    "axios": "^1.6.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "stripe": "^14.0.0"
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "stripe": "^14.10.0",
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
